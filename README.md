@@ -15,7 +15,7 @@
 
 [Some Frequently Used Linux Command](./linux/some-frequently-used-linux-command)
 
-[How To Change The Default File Called Main On Replit](./linux/how-to-change-the-default-file-called-main-on-replit.md)
+[How To Change The Default File Called Main On Replit](./linux/How To Change The Default File Called Main On Replit.md)
 
 
 
