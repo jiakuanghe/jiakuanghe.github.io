@@ -9,6 +9,16 @@
 
 
 
+## Linux Command
+
+[Where To Use Linux Command](./linux/where-to-use-linux-command)
+
+[Some Frequently Used Linux Command](./linux/some-frequently-used-linux-command)
+
+[How To Change The Default File Called Main On Replit](./linux/how-to-change-the-default-file-called-main-on-replit.md)
+
+
+
 ## Debugger
 
 [What is debugger?](./debugger/what-is-debugger)
@@ -18,4 +28,14 @@
 [How to debug - Java](./debugger/how-to-debug-java)
 
 [How to debug - C++](./debugger/how-to-debug-cpp)
+
+
+
+## Candidate Topic
+
+linux ssh
+
+git
+
+Pygame
 
