@@ -9,6 +9,12 @@
 
 
 
+## Projects
+
+[How To Build A Discord Robot](./projects/how-to-build-a-discord-robot)
+
+
+
 ## Linux Command
 
 [Where To Use Linux Command](./linux/where-to-use-linux-command)
