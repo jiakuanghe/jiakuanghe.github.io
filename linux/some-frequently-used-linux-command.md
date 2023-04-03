@@ -114,6 +114,8 @@ quit without save `:q!` (If you edit anything after you use insert mode, you don
 
 
 
+![Untitled Diagram.drawio (1)](./pictures/some-frequently-used-linux-command/Untitled%20Diagram.drawio%20(1).png)
+
 
 
 ![img](./pictures/some-frequently-used-linux-command/vi-vim-cheat-sheet.gif)
@@ -127,6 +129,27 @@ quit without save `:q!` (If you edit anything after you use insert mode, you don
 > [vi-vim-cheat-sheet.gif (1024×724) (viemu.com)](http://www.viemu.com/vi-vim-cheat-sheet.gif)
 >
 > [Vim (text editor) - Wikipedia](https://en.wikipedia.org/wiki/Vim_(text_editor)#Modes)
+
+
+
+## rm
+
+abbr: ReMove
+
+used to remove the file or directory
+
+```bash
+rm THE_FILE_YOU_WANT_TO_REMOVE
+```
+
+Example:
+
+```bash
+touch a.txt
+rm a.txt
+```
+
+
 
 
 
@@ -164,6 +187,20 @@ cd Desktop
 
 ```
 wget https://upload.wikimedia.org/wikipedia/commons/8/80/Cowsay_Typical_Output.png
+```
+
+
+
+## passwd
+
+```bash
+passwd THE_USERNAME_WE_WANT_TO_EDIT_THE_PASSWORD
+```
+
+### Example
+
+```bash
+passwd root
 ```
 
 
