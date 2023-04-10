@@ -1,5 +1,9 @@
 # jiakuanghe.github.io
 
+Computer Science Introduction: [Crash Course Computer Science Preview - YouTube](https://www.youtube.com/watch?v=tpIctyqH29Q&list=PLH2l6uzC4UEW0s7-KewFLBC1D0l6XRfye)
+
+
+
 ## AI Club's Meeting Totes
 
 ### 03/20/2023
