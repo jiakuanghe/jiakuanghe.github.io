@@ -34,7 +34,17 @@ Linux Command
 
 
 
-#### SSH
+### 04/10/2023
+
+#### Schools News
+
+[Summer 2023 Classes](https://www.ccsf.edu/academics/class-schedule)
+
+
+
+
+
+### SSH
 
 [What Is SSH](./linux/what-is-ssh)
 
@@ -70,7 +80,7 @@ Linux Command
 
 ## Candidate Topic
 
-linux ssh
+Computer Network
 
 git
 
