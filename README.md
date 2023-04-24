@@ -80,7 +80,15 @@ Fall Course 2023: [Class Schedule | CCSF](https://www.ccsf.edu/academics/class-s
 
 ### 04/24/2023
 
+#### AI News
+
+Auto GPT: [https://github.com/Significant-Gravitas/Auto-GPT](https://github.com/Significant-Gravitas/Auto-GPT)
+
 Slide: [https://docs.google.com/presentation/d/1ESQT722ujX0xAa3mEsL74EsCtMCDRuF0/edit?usp=sharing&ouid=104217728810751978758&rtpof=true&sd=true](https://docs.google.com/presentation/d/1ESQT722ujX0xAa3mEsL74EsCtMCDRuF0/edit?usp=sharing&ouid=104217728810751978758&rtpof=true&sd=true)
+
+
+
+draw Diagram: [https://draw.io](https://draw.io)
 
 
 
