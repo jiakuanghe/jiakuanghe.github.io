@@ -4,6 +4,18 @@ Computer Science Introduction: [Crash Course Computer Science Preview - YouTube]
 
 
 
+```java
+System.out.println();
+// shortcut
+syso
+```
+
+
+
+
+
+
+
 ## AI Club's Meeting Totes
 
 ### 03/20/2023
@@ -45,6 +57,30 @@ Linux Command
 [Summer 2023 Classes](https://www.ccsf.edu/academics/class-schedule)
 
 
+
+Computer Processing
+
+- Memory
+
+- Hardware
+
+- Software
+
+[https://docs.google.com/presentation/d/1ESQT722ujX0xAa3mEsL74EsCtMCDRuF0/edit?usp=sharing&ouid=104217728810751978758&rtpof=true&sd=true](https://docs.google.com/presentation/d/1ESQT722ujX0xAa3mEsL74EsCtMCDRuF0/edit?usp=sharing&ouid=104217728810751978758&rtpof=true&sd=true)
+
+
+
+### 04/17/2023
+
+#### School News
+
+Fall Course 2023: [Class Schedule | CCSF](https://www.ccsf.edu/academics/class-schedule)
+
+
+
+### 04/24/2023
+
+Slide: [https://docs.google.com/presentation/d/1ESQT722ujX0xAa3mEsL74EsCtMCDRuF0/edit?usp=sharing&ouid=104217728810751978758&rtpof=true&sd=true](https://docs.google.com/presentation/d/1ESQT722ujX0xAa3mEsL74EsCtMCDRuF0/edit?usp=sharing&ouid=104217728810751978758&rtpof=true&sd=true)
 
 
 
