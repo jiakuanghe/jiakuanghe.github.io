@@ -96,6 +96,10 @@ draw Diagram: [https://draw.io](https://draw.io)
 
 Slides: [https://www.slideshare.net/bcbbslides/introduction-to-git-and-github-72514916](https://www.slideshare.net/bcbbslides/introduction-to-git-and-github-72514916)
 
+#### School News
+
+We can begin to register for the fall class
+
 
 
 
