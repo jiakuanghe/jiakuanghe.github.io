@@ -78,7 +78,7 @@ Fall Course 2023: [Class Schedule | CCSF](https://www.ccsf.edu/academics/class-s
 
 
 
-### 04/24/2023
+### 04/24/2023 Computer Network
 
 #### AI News
 
@@ -89,6 +89,14 @@ Slide: [https://docs.google.com/presentation/d/1ESQT722ujX0xAa3mEsL74EsCtMCDRuF0
 
 
 draw Diagram: [https://draw.io](https://draw.io)
+
+
+
+### 05/01/2023 Git
+
+Slides: [https://www.slideshare.net/bcbbslides/introduction-to-git-and-github-72514916](https://www.slideshare.net/bcbbslides/introduction-to-git-and-github-72514916)
+
+
 
 
 
@@ -127,8 +135,6 @@ draw Diagram: [https://draw.io](https://draw.io)
 
 
 ## Candidate Topic
-
-Computer Network
 
 git
 
