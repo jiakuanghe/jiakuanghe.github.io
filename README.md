@@ -12,7 +12,9 @@ syso
 
 
 
+## Summer 2023 Intership
 
+[https://github.com/pittcsc/Summer2023-Internships](https://github.com/pittcsc/Summer2023-Internships)
 
 
 
@@ -99,6 +101,12 @@ Slides: [https://www.slideshare.net/bcbbslides/introduction-to-git-and-github-72
 #### School News
 
 We can begin to register for the fall class
+
+
+
+### 05/08 Pygame
+
+[snake ai club - Replit](https://replit.com/@JasonAvina/snake-ai-club?v=1#main.py)
 
 
 
