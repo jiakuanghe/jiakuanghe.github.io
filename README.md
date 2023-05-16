@@ -108,7 +108,9 @@ We can begin to register for the fall class
 
 [snake ai club - Replit](https://replit.com/@JasonAvina/snake-ai-club?v=1#main.py)
 
+https://www.slideshare.net/Felix11H/pygame-presentation
 
+![image-20230508162656642](./pictures/README/image-20230508162656642.png)
 
 
 
