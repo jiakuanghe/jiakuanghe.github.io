@@ -12,13 +12,29 @@ syso
 
 
 
-## Summer 2023 Intership
+## Summer 2024 Internship
+
+[GitHub - SimplifyJobs/Summer2024-Internships: Collection of Summer 2024 tech internships!](https://github.com/SimplifyJobs/Summer2024-Internships)
+
+[2023-2024 Tech Internship Guide & Salaries | Levels.fyi](https://www.levels.fyi/internships/)
+
+
+
+## Summer 2023 Internship
 
 [https://github.com/pittcsc/Summer2023-Internships](https://github.com/pittcsc/Summer2023-Internships)
 
 
 
 ## AI Club's Meeting Totes
+
+### 11/7/2023
+
+[Markdown](./markdown/markdown-syntax.md)
+
+
+
+
 
 ### 03/20/2023
 
