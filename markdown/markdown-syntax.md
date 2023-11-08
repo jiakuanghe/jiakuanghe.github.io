@@ -2,7 +2,7 @@
 
 [Markdown - Wikipedia](https://en.wikipedia.org/wiki/Markdown)
 
-[Markdown Cheat Sheet | Markdown Guide](https://www.markdownguide.org/cheat-sheet/)
+[Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)
 
 
 
