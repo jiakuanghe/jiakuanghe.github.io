@@ -6,7 +6,7 @@ Computer Science Introduction: [Crash Course Computer Science Preview - YouTube]
 
 ```java
 System.out.println();
-// shortcut
+// shortcut for Eclipse
 syso
 ```
 
@@ -92,7 +92,7 @@ Computer Processing
 
 #### School News
 
-Fall Course 2023: [Class Schedule | CCSF](https://www.ccsf.edu/academics/class-schedule)
+Fall Course 2023: [Class Schedule](https://www.ccsf.edu/academics/class-schedule)
 
 
 
