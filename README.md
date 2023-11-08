@@ -16,7 +16,7 @@ syso
 
 [GitHub - SimplifyJobs/Summer2024-Internships: Collection of Summer 2024 tech internships!](https://github.com/SimplifyJobs/Summer2024-Internships)
 
-[2023-2024 Tech Internship Guide & Salaries | Levels.fyi](https://www.levels.fyi/internships/)
+[2023-2024 Tech Internship Guide & Salaries](https://www.levels.fyi/internships/)
 
 
 
