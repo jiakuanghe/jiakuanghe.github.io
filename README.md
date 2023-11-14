@@ -6,7 +6,7 @@
 
 [CSHub Discord](https://discord.gg/epVESxEvtx)
 
-> If you would like to display your group here, contact me on Discord: imsamhe
+> If you would like to display your group here, contact me on Discord: `imsamhe`
 
 
 
