@@ -1,18 +1,24 @@
 # jiakuanghe.github.io
 
+## CS-Related Club
+
+[AI Club Discord](https://discord.gg/AF75BX3Dh)
+
+[CSHub Discord](https://discord.gg/epVESxEvtx)
+
+> If you would like to display your group here, contact me on Discord: imsamhe
+
+
+
+## Learning Resource 
+
 Computer Science Introduction: [Crash Course Computer Science Preview - YouTube](https://www.youtube.com/watch?v=tpIctyqH29Q&list=PLH2l6uzC4UEW0s7-KewFLBC1D0l6XRfye)
 
 
 
-```java
-System.out.println();
-// shortcut for Eclipse
-syso
-```
+## Internship
 
-
-
-## Summer 2024 Internship
+### Summer 2024 Internship
 
 [GitHub - SimplifyJobs/Summer2024-Internships: Collection of Summer 2024 tech internships!](https://github.com/SimplifyJobs/Summer2024-Internships)
 
@@ -20,19 +26,27 @@ syso
 
 
 
-## Summer 2023 Internship
+### Summer 2023 Internship
 
 [https://github.com/pittcsc/Summer2023-Internships](https://github.com/pittcsc/Summer2023-Internships)
 
 
 
-## AI Club's Meeting Totes
+## Projects
+
+[How To Build A Discord Robot](./projects/how-to-build-a-discord-robot)
+
+
+
+## Workshop Notes
+
+### Candidate Topic
+
+
 
 ### 11/7/2023
 
 [Markdown](./markdown/markdown-syntax.md)
-
-
 
 
 
@@ -46,7 +60,7 @@ syso
 
 
 
-Linux Command
+#### Linux Command
 
 [Where To Use Linux Command](./linux/where-to-use-linux-command)
 
@@ -76,7 +90,7 @@ Linux Command
 
 
 
-Computer Processing
+#### Computer Processing
 
 - Memory
 
@@ -140,18 +154,6 @@ https://www.slideshare.net/Felix11H/pygame-presentation
 
 
 
-
-
-## Projects
-
-[How To Build A Discord Robot](./projects/how-to-build-a-discord-robot)
-
-
-
-
-
-
-
 ## Debugger
 
 [What is debugger?](./debugger/what-is-debugger)
@@ -162,11 +164,8 @@ https://www.slideshare.net/Felix11H/pygame-presentation
 
 [How to debug - C++](./debugger/how-to-debug-cpp)
 
-
-
-## Candidate Topic
-
-git
-
-Pygame
-
+```java
+System.out.println();
+// shortcut for Eclipse
+syso
+```
