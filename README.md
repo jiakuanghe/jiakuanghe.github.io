@@ -44,6 +44,18 @@ Computer Science Introduction: [Crash Course Computer Science Preview - YouTube]
 
 
 
+### 11/17/2023
+
+[Schedule of Classes - SPRING 2024 CREDIT](https://www.ccsf.edu/sites/default/files/2023/document/spring-2024-credit-classes.pdf)
+
+[OpenAI blames DDoS attack for ongoing ChatGPT outage](https://techcrunch.com/2023/11/09/openai-blames-ddos-attack-for-ongoing-chatgpt-outage/)
+
+[OpenAI Status](https://status.openai.com/)
+
+[DDOS Note](./ddos/ddos-note)
+
+
+
 ### 11/7/2023
 
 [Markdown](./markdown/markdown-syntax.md)

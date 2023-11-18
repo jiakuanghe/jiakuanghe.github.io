@@ -23,6 +23,29 @@ Similar to HTML [HTML - Wikipedia](https://en.m.wikipedia.org/wiki/HTML)
 
 
 
+```
+Tech Events Calendar Links (WIP)
+
+Tech Events (In-person, No-Cost ||or low-cost||) - main calendar
+ https://calendar.google.com/calendar/embed?src=0fa7cf7bd86b3bc590cea0d12e21dbc7a89deae1d71fbda4c4177141a4ed0dac%40group.calendar.google.com&ctz=UTC
+
+~~Tech Events (Online)
+https://calendar.google.com/calendar/embed?src=a863d235720d61652811f56b4a654b458fa570404a369c65cc4e5985e9bef12e%40group.calendar.google.com&ctz=UTC
+A lot of these
+
+Tech Events (Expensive)
+https://calendar.google.com/calendar/embed?src=202467bb604d864546ddde261a0c8f04fd0bff03bbfe0c7682cadb5dfe4e945c%40group.calendar.google.com&ctz=UTC
+Unlike to take advantage of, but tracking them anyway
+~~
+
+Edit: With use of tags and [Tags for Google Calendar](https://chrome.google.com/webstore/detail/tags-for-google-calendar/ncpjnjohbcgocheijdaafoidjnkpajka/related),
+the online and expensive events are once again folded back into the main event calendar
+```
+
+
+
+
+
 ## Some Frequent Used Syntax
 
 ### Link
@@ -42,8 +65,6 @@ Similar to HTML [HTML - Wikipedia](https://en.m.wikipedia.org/wiki/HTML)
 ```
 > This is a comment
 ```
-
-
 
 
 
@@ -67,6 +88,20 @@ Similar to HTML [HTML - Wikipedia](https://en.m.wikipedia.org/wiki/HTML)
 ```language(java,json,c,cpp)
 ```
 ````
+
+
+
+### [Strikethrough](https://www.markdownguide.org/extended-syntax/#strikethrough)
+
+~~The world is flat.~~
+
+
+
+### Hide Content
+
+people need to click to reveal the content
+
+In-person, No-Cost ||or low-cost||
 
 
 
