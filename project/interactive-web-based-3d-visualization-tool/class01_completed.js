@@ -8,15 +8,69 @@ if (!gl) {
 }
 
 // Define the vertices for the triangle
+// const vertices = new Float32Array([
+//     // triangle 1.
+//     0.0, 0.5, 0.0,
+//    -0.5, -0.5, 0.0,
+//     0.5, -0.5, 0.0,
+//     0.5, 0.5, 0.0,
+//     -0, -0.5, 0.0,
+//     1.5, -0.5, 0.0,
+// ]);
+
 const vertices = new Float32Array([
-    // triangle 1.
-    0.0, 0.5, 0.0,
-   -0.5, -0.5, 0.0,
-    0.5, -0.5, 0.0,
-    0.5, 0.5, 0.0,
-    -0, -0.5, 0.0,
-    1.5, -0.5, 0.0,
+    // Central point (repeated for each triangle)
+    0.0, 0.0, 0.0, // Center
+    0.5, 0.0, 0.0, // Vertex 1
+    0.25, 0.433, 0.0, // Vertex 2
+
+    0.0, 0.0, 0.0, // Center
+    0.25, 0.433, 0.0, // Vertex 2
+    -0.25, 0.433, 0.0, // Vertex 3
+
+    0.0, 0.0, 0.0, // Center
+    -0.25, 0.433, 0.0, // Vertex 3
+    -0.5, 0.0, 0.0, // Vertex 4
+
+    0.0, 0.0, 0.0, // Center
+    -0.5, 0.0, 0.0, // Vertex 4
+    -0.25, -0.433, 0.0, // Vertex 5
+
+    0.0, 0.0, 0.0, // Center
+    -0.25, -0.433, 0.0, // Vertex 5
+    0.25, -0.433, 0.0, // Vertex 6
+
+    0.0, 0.0, 0.0, // Center
+    0.25, -0.433, 0.0, // Vertex 6
+    0.5, 0.0, 0.0, // Vertex 1 (to close the hexagon)
 ]);
+
+// const vertices = new Float32Array([
+//     // Central point (repeated for each triangle)
+//     0.0, 0.0, 0.0, // Center
+//     Math.cos(0), Math.sin(0), 0.0, // Vertex 1
+//     Math.cos(Math.PI / 3), Math.sin(Math.PI / 3), 0.0, // Vertex 2
+
+//     0.0, 0.0, 0.0, // Center
+//     Math.cos(Math.PI / 3), Math.sin(Math.PI / 3), 0.0, // Vertex 2
+//     Math.cos(2 * Math.PI / 3), Math.sin(2 * Math.PI / 3), 0.0, // Vertex 3
+
+//     0.0, 0.0, 0.0, // Center
+//     Math.cos(2 * Math.PI / 3), Math.sin(2 * Math.PI / 3), 0.0, // Vertex 3
+//     Math.cos(Math.PI), Math.sin(Math.PI), 0.0, // Vertex 4
+
+//     0.0, 0.0, 0.0, // Center
+//     Math.cos(Math.PI), Math.sin(Math.PI), 0.0, // Vertex 4
+//     Math.cos(4 * Math.PI / 3), Math.sin(4 * Math.PI / 3), 0.0, // Vertex 5
+
+//     0.0, 0.0, 0.0, // Center
+//     Math.cos(4 * Math.PI / 3), Math.sin(4 * Math.PI / 3), 0.0, // Vertex 5
+//     Math.cos(5 * Math.PI / 3), Math.sin(5 * Math.PI / 3), 0.0, // Vertex 6
+
+//     0.0, 0.0, 0.0, // Center
+//     Math.cos(5 * Math.PI / 3), Math.sin(5 * Math.PI / 3), 0.0, // Vertex 6
+//     Math.cos(0), Math.sin(0), 0.0, // Vertex 1 (to close the hexagon)
+// ]);
 
 // Create a buffer and put the vertices in it
 const buffer = gl.createBuffer();
