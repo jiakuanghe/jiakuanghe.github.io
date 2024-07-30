@@ -13,49 +13,35 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
-// Create a cube
-const geometry = new THREE.BoxGeometry()
-//const geometry  = new THREE.SphereGeometry(1, 32, 16);
-//const geometry = new THREE.TorusGeometry(0.8, 0.2, 16, 100)
-const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-const cube = new THREE.Mesh(geometry, material);
-scene.add(cube);
-
-// 2. Create edge geometry and material
-const edgeGeometry = new THREE.EdgesGeometry(geometry);
-const edgeMaterial = new THREE.LineBasicMaterial({ color: 0xff0000 }); // Edge color
-const cubeEdges = new THREE.LineSegments(edgeGeometry, edgeMaterial);
-scene.add(cubeEdges);
-
-const sphereGeometry  = new THREE.SphereGeometry(0.7, 32, 16);
-const sphereMesh = new THREE.Mesh(sphereGeometry, material);
-scene.add(sphereMesh);
-
-sphereMesh.position.x = 1
-// use group
 const group = new THREE.Group();
+// Create the bulb geometry
+const bulbGeometry = new THREE.SphereGeometry(1, 32, 32);
+const bulbMaterial = new THREE.MeshPhongMaterial({ color: 0xffff00, emissive: 0xffff00, emissiveIntensity: 0.6 });
+const bulb = new THREE.Mesh(bulbGeometry, bulbMaterial);
+bulb.position.y = 1;
+group.add(bulb)
+// Add light
+const ambientLight = new THREE.AmbientLight(0x404040);
+group.add(ambientLight)
+const pointLight = new THREE.PointLight(0xffffff, 1, 100);
+pointLight.position.set(2, 3, 4);
+group.add(pointLight)
+
+// Create the base geometry
+const baseGeometry = new THREE.CylinderGeometry(0.3, 0.3, 0.5, 32);
+const baseMaterial = new THREE.MeshPhongMaterial({ color: 0x333333 });
+const base = new THREE.Mesh(baseGeometry, baseMaterial);
+base.position.y = 0;
+group.add(base)
+
+// use group
 scene.add(group);
-
-group.add(cube)
-group.add(cubeEdges)
-group.add(sphereMesh)
-
-//group.scale.set(2, 2, 2)
-//cube.position.set(1, 1, 1)
-/*cube.scale.set(2, 2, 2);
-cubeEdges.scale.set(2, 2, 2);*/
 
 // Animation loop
 function animate() {
     requestAnimationFrame(animate);
 
-    // Rotate the cube
-    /*cube.rotation.x = 0.45;
-    cube.rotation.y = 0.45;
-    cubeEdges.rotation.x = 0.45;
-    cubeEdges.rotation.y = 0.45;*/
-
-    // use group
+    // Rotate the bulb
     group.rotation.x += 0.01;
     group.rotation.y += 0.01;
 
