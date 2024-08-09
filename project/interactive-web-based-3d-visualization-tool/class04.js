@@ -47,22 +47,22 @@ const boxGeometry = new THREE.BoxGeometry(boxX, boxY, boxZ, boxSegment, boxSegme
 // add cube to the scene
 const cube = new THREE.Mesh(boxGeometry, materialGold);
 cube.position.set(0, 1, 0);
-scene.add(cube);
+// scene.add(cube);
 
-const sphereGeometry = new THREE.SphereGeometry(0.5, 32, 32); // radius, widthSegments, heightSegments
+const sphereGeometry = new THREE.SphereGeometry(2, 32, 32); // radius, widthSegments, heightSegments
 const sphere = new THREE.Mesh(sphereGeometry, materialUV);
-sphere.position.set(1.5, 1, 0)
+sphere.position.set(0.5, 0.3, 0)
 scene.add(sphere);
 
 const cylinderGeometry = new THREE.CylinderGeometry(0.5, 0.5, 1, 32); // top radius, bottom radius, height, radial segments
 const cylinder = new THREE.Mesh(cylinderGeometry, materialGold);
 cylinder.position.set(-1.5, 1, 0);
-scene.add(cylinder);
+// scene.add(cylinder);
 
 const planeGeometry = new THREE.PlaneGeometry(3.6, 1.8, 180, 90);
 const plane = new THREE.Mesh(planeGeometry, materialDisplacement)
 plane.position.set(0, -1, 0)
-scene.add(plane);
+// scene.add(plane);
 
 // Adding OrbitControls
 var controls = new OrbitControls(camera, renderer.domElement);
