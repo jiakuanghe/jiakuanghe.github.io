@@ -24,7 +24,7 @@ scene.add(ambientLight)
 // load different color textures
 const textureRock = new THREE.TextureLoader().load('textures/cracked+rock.jpg');
 const textureGold = new THREE.TextureLoader().load('textures/intricateGold.png');
-const textureUV = new THREE.TextureLoader().load('textures/uv_grid_opengl.jpg');
+const textureUV = new THREE.TextureLoader().load('textures/earth_normalmap_8192x4096.jpg');
 const displacementMap = new THREE.TextureLoader().load('textures/cracked+rock.jpg');
 const bumpTexture = new THREE.TextureLoader().load('textures/earth_bumpmap.jpg')
 
