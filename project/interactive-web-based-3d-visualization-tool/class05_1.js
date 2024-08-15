@@ -69,7 +69,7 @@ function init() {
 	}
 	function onError() { }
 
-	loader.load('models/torus_texture.obj', function (object) {
+	loader.load('models/cube.obj', function (object) {
 
 		// attach material
 		object.traverse(function (child) {
