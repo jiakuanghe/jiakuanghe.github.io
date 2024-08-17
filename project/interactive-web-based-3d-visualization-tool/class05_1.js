@@ -74,7 +74,7 @@ function init() {
 		// attach material
 		object.traverse(function (child) {
 			if (child.isMesh) {
-				child.material = bunnyMaterial; // Apply the material to each mesh
+				child.material = textureMaterial; // Apply the material to each mesh
 			}
 		});
 
