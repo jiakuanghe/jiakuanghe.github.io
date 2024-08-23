@@ -2,6 +2,7 @@ import * as THREE from 'three';
 
 import { OrbitControls } from 'https://threejs.org/examples/jsm/controls/OrbitControls.js';
 import { ShadowMapViewer } from 'https://threejs.org/examples/jsm/utils/ShadowMapViewer.js';
+import { OBJLoader } from 'https://threejs.org/examples/jsm/loaders/OBJLoader.js';
 
 const viewDepthMap = true;
 
@@ -77,11 +78,49 @@ function initScene() {
 				cube.position.set(x, y, z);
 				cube.castShadow = true;
 				cube.receiveShadow = true;
-				group.add(cube)
+				// group.add(cube)
 			}
 	// shift everything up by 2
 	group.position.set(0, 5, 0);
 	scene.add(group)
+
+	const textureMap = new THREE.TextureLoader().load('textures/uv_grid_opengl.jpg');
+	const textureMaterial = new THREE.MeshStandardMaterial({ map: textureMap });
+
+	const loader = new OBJLoader();
+	// model
+	function onProgress(xhr) {
+		if (xhr.lengthComputable) {
+			const percentComplete = xhr.loaded / xhr.total * 100;
+			//console.log('model ' + percentComplete.toFixed(2) + '% downloaded');
+		}
+	}
+	function onError() { }
+
+	loader.load('models/cube.obj', function (object) {
+		// attach material
+		object.traverse(function (child) {
+			child.castShadow = true;
+			child.receiveShadow = true;
+			if (child.isMesh) {
+				child.material = textureMaterial; // Apply the material to each mesh
+			}
+		});
+
+		// Calculate the bounding box to get model size and center
+		const boundingBox = new THREE.Box3().setFromObject(object);
+		// Center the model
+		const center = boundingBox.getCenter(new THREE.Vector3());
+		// Scale the model to a unit scale and center it to (0,0,0)
+		const size = boundingBox.getSize(new THREE.Vector3());
+		const maxDimension = Math.max(size.x, size.y, size.z);
+		const scale = 1.0 / maxDimension;
+		// object.scale.set(scale, scale, scale);
+		// object.scale.set(0.5, 0.5, 0.5);
+		// object.position.set(-center.x * scale, -center.y * scale, -center.z * scale)
+		// object.position.set(5, 3, 10)
+		group.add(object)
+	}, onProgress, onError);
 
 	group1 = group.clone();
 	group1.scale.set(0.5, 0.5, 0.5)
