@@ -54,6 +54,11 @@ class particleSystem {
 	constructor(nParticles) {
 		this.m_nParticles = nParticles;
 
+        this.planets = [
+            { position: new THREE.Vector3(1, 0, 0), mass: 0.5 },
+            { position: new THREE.Vector3(-1, 0, 0), mass: 0.5 }
+        ];
+
 		//this.BrownianWalkInit();
 		//this.gravityFallInit();
 		this.gravityAttractInit();
@@ -214,6 +219,13 @@ class particleSystem {
 		// [0,0,0]: center of gravity
 		sphere.position.set(0, 0, 0)
 		scene.add(sphere);
+
+        // Add additional planets
+        this.planets.forEach(planet => {
+            const planetSphere = new THREE.Mesh(sphereGeometry, metalMaterial);
+            planetSphere.position.copy(planet.position);
+            scene.add(planetSphere);
+        });
 	}
 
 	gravityAttract() {
@@ -222,15 +234,29 @@ class particleSystem {
 		let minSpeed = 100000.0;
 		let maxSpeed = 0;
 		for (let i = 0; i < this.m_positions.length; i += 3) {
+			let totalForce = new THREE.Vector3(0, 0, 0);
+
 			// compute A.
 			let P = new THREE.Vector3(this.m_positions[i], this.m_positions[i + 1], this.m_positions[i + 2]);
 			let r = P.length();
 			P.normalize();
 			let a = - G/(r * r);
 
-			this.m_velocity[i] += a * P.x * dt;
-			this.m_velocity[i + 1] += a * P.y * dt;
-			this.m_velocity[i + 2] += a * P.z * dt;
+			totalForce.add(P.multiplyScalar(a));
+
+            // Compute forces from additional planets
+            this.planets.forEach(planet => {
+                let planetPos = planet.position.clone();
+                let direction = new THREE.Vector3(planetPos[i], planetPos[i + 1], planetPos[i + 2]);
+                let distance = direction.length();
+                direction.normalize();
+                let forceMagnitude = - G / (distance * distance);
+                totalForce.add(direction.multiplyScalar(forceMagnitude));
+            });
+
+            this.m_velocity[i] += totalForce.x * dt;
+            this.m_velocity[i + 1] += totalForce.y * dt;
+            this.m_velocity[i + 2] += totalForce.z * dt;
 
 			this.m_positions[i] += this.m_velocity[i] * dt;
 			this.m_positions[i + 1] += this.m_velocity[i + 1] * dt;
