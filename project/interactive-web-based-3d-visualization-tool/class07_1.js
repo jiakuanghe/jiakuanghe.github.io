@@ -52,12 +52,8 @@ class particleSystem {
 	}
 
 	constructor(nParticles) {
+		this.planets = [];
 		this.m_nParticles = nParticles;
-
-        this.planets = [
-            { position: new THREE.Vector3(1, 0, 0), mass: 0.5 },
-            { position: new THREE.Vector3(-1, 0, 0), mass: 0.5 }
-        ];
 
 		//this.BrownianWalkInit();
 		//this.gravityFallInit();
@@ -70,7 +66,7 @@ class particleSystem {
 			sizeAttenuation: true,
 			map: sprite,
 			alphaTest: 0.5,
-			blending: THREE.AdditiveBlending, 
+			blending: THREE.AdditiveBlending,
 			transparent: true,
 			vertexColors: true // Use vertex colors
 		});
@@ -124,7 +120,7 @@ class particleSystem {
 			this.m_color[i + 2] = color[2];
 		}
 	}
-	
+
 	gravityFallInit() {
 		this.m_geometry = new THREE.BufferGeometry();
 		const vertices = [];
@@ -207,11 +203,11 @@ class particleSystem {
 			this.m_velocity[i + 1] = V[1];
 			this.m_velocity[i + 2] = V[2];
 		}
-		
+
 		// Create a metallic material with a gold tint
 		const metalMaterial = new THREE.MeshStandardMaterial({
-			color: 0xFFD700, // Gold color
-			metalness: 0.9, // Fully metallic
+			color: 'red', // Gold color
+			metalness: 0.5, // Fully metallic
 			roughness: 0.1 // A bit of roughness to simulate gold's reflectivity
 		});
 		const sphereGeometry = new THREE.SphereGeometry(0.5, 32, 32); // radius, widthSegments, heightSegments
@@ -219,13 +215,27 @@ class particleSystem {
 		// [0,0,0]: center of gravity
 		sphere.position.set(0, 0, 0)
 		scene.add(sphere);
+		this.planets.push(sphere);
 
-        // Add additional planets
-        this.planets.forEach(planet => {
-            const planetSphere = new THREE.Mesh(sphereGeometry, metalMaterial);
-            planetSphere.position.copy(planet.position);
-            scene.add(planetSphere);
-        });
+		const metalMaterial2 = new THREE.MeshStandardMaterial({
+			color: 'green', // Gold color
+			metalness: 0.5, // Fully metallic
+			roughness: 0.1 // A bit of roughness to simulate gold's reflectivity
+		});
+		const sphere2 = new THREE.Mesh(sphereGeometry, metalMaterial2);
+		sphere2.position.set(3, -1, 0)
+		scene.add(sphere2);
+		this.planets.push(sphere2);
+
+		const metalMaterial3 = new THREE.MeshStandardMaterial({
+			color: 'blue', // Gold color
+			metalness: 0.5, // Fully metallic
+			roughness: 0.1 // A bit of roughness to simulate gold's reflectivity
+		});
+		const sphere3 = new THREE.Mesh(sphereGeometry, metalMaterial3);
+		sphere3.position.set(2, 2, 0)
+		scene.add(sphere3);
+		this.planets.push(sphere3);
 	}
 
 	gravityAttract() {
@@ -234,29 +244,26 @@ class particleSystem {
 		let minSpeed = 100000.0;
 		let maxSpeed = 0;
 		for (let i = 0; i < this.m_positions.length; i += 3) {
-			let totalForce = new THREE.Vector3(0, 0, 0);
+			let totalForces = new THREE.Vector3();
 
 			// compute A.
 			let P = new THREE.Vector3(this.m_positions[i], this.m_positions[i + 1], this.m_positions[i + 2]);
 			let r = P.length();
 			P.normalize();
 			let a = - G/(r * r);
+			totalForces.add(a * P);
 
-			totalForce.add(P.multiplyScalar(a));
+			for (const planet of this.planets) {
+				let P = new THREE.Vector3(planet.position.x, planet.position.y, planet.position.z);
+				r = P.length();
+				P.normalize();
+				let a = - G/(r * r);
+				totalForces.add(a * P);
+			}
 
-            // Compute forces from additional planets
-            this.planets.forEach(planet => {
-                let planetPos = planet.position.clone();
-                let direction = new THREE.Vector3(planetPos[i], planetPos[i + 1], planetPos[i + 2]);
-                let distance = direction.length();
-                direction.normalize();
-                let forceMagnitude = - G / (distance * distance);
-                totalForce.add(direction.multiplyScalar(forceMagnitude));
-            });
-
-            this.m_velocity[i] += totalForce.x * dt;
-            this.m_velocity[i + 1] += totalForce.y * dt;
-            this.m_velocity[i + 2] += totalForce.z * dt;
+			this.m_velocity[i] += totalForces.x * dt;
+			this.m_velocity[i + 1] += totalForces.y * dt;
+			this.m_velocity[i + 2] += totalForces.z * dt;
 
 			this.m_positions[i] += this.m_velocity[i] * dt;
 			this.m_positions[i + 1] += this.m_velocity[i + 1] * dt;
@@ -287,7 +294,7 @@ class particleSystem {
 		const speedR = maxSpeed - minSpeed; // range of velociy
 		for (let i = 0; i < this.m_positions.length; i += 3) {
 			let speedMag = Math.sqrt(this.m_velocity[i] * this.m_velocity[i] + this.m_velocity[i + 1] * this.m_velocity[i + 1] + this.m_velocity[i + 2] * this.m_velocity[i + 2]);
-			let color = blackBodyColor((speedMag - minSpeed) / speedR); 
+			let color = blackBodyColor((speedMag - minSpeed) / speedR);
 			this.m_color[i] = color[0];
 			this.m_color[i + 1] = color[1];
 			this.m_color[i + 2] = color[2];
@@ -308,7 +315,7 @@ function init() {
 	camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight, 0.1, 1000);
 	camera.position.z = 5;
 	scene = new THREE.Scene();
-	
+
 	// add light.
 	const directionLight = new THREE.DirectionalLight(0xffffff, 2)
 	directionLight.position.set(0, 0, 10)
@@ -316,7 +323,7 @@ function init() {
 
 	const ambientLight = new THREE.AmbientLight(0xffffff, 1); // white light at 50% intensity
 	scene.add(ambientLight)
-	
+
 	// 100K
 	particleSys = new particleSystem(100000);
 
@@ -328,7 +335,7 @@ function init() {
 
 	document.body.appendChild(renderer.domElement);
 	document.body.style.touchAction = 'none';
-	
+
 	// Adding OrbitControls
 	controls = new OrbitControls(camera, renderer.domElement);
 	window.addEventListener('resize', onWindowResize);
